@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treino do Dia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="treino-header">
+    <button class="btn-voltar" onclick="voltar()">⬅</button>
+    <h1 id="titulo">Treino</h1>
+  </header>
+
+  <div class="progress-bg"><div id="progress-bar-day" class="progress-fill"></div></div>
+  <p id="progresso-dia"></p>
+
+  <div class="cronometro-card">
+    <span id="tempo-restante">00:00</span>
+    <div class="cronometro-controles">
+      <button onclick="iniciarCronometro(60)">⏱ 60s</button>
+      <button onclick="iniciarCronometro(90)">⏱ 90s</button>
+      <button class="btn-parar" onclick="pararCronometro()">⏹ Parar</button>
+    </div>
+  </div>
+
+  <div id="lista-exercicios"></div>
+
+  <div class="diario-card">
+    <h3>📝 Diário do Treino</h3>
+    <textarea id="nota-dia" placeholder="Como você se sentiu hoje? Ex: Senti o ombro esquerdo pesado, consegui mais repetições no Dips..."></textarea>
+    <button class="btn-salvar" onclick="salvarNota()">💾 Salvar Nota</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
